@@ -132,6 +132,9 @@ table {
 html {
   font-size: 62.5%;
 }
+img {
+  max-width: 100%;
+}
 html,
 body {
   font-family: 'Ubuntu', sans-serif;
@@ -194,6 +197,11 @@ footer {
   justify-content: center;
   align-items: center;
 }
+@media (max-width: 500px) {
+  .home .intro img {
+    border-radius: 10px;
+  }
+}
 .home .intro h2 {
   padding: 15px;
 }
@@ -203,13 +211,25 @@ footer {
 .home .space-images {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
   width: 100%;
 }
 .home .space-images img {
-  width: 28%;
-  margin: 20px 2.5%;
+  margin: 20px 0;
   border-radius: 20px;
   height: 100%;
+}
+@media (max-width: 500px) {
+  .home .space-images img {
+    width: 90%;
+    margin: 20px 0;
+  }
+}
+@media (max-width: 500px) {
+  .home .space-images .sky,
+  .home .space-images .launch {
+    display: none;
+  }
 }
 .home .visit-planets {
   padding: 15px;
@@ -227,8 +247,20 @@ footer {
   display: flex;
   justify-content: center;
 }
+@media (max-width: 500px) {
+  .home .walk {
+    margin-top: 30px;
+    padding: 20px 15px;
+    flex-direction: column-reverse;
+  }
+}
 .home .walk .walk-text {
   width: 50%;
+}
+@media (max-width: 500px) {
+  .home .walk .walk-text {
+    width: 100%;
+  }
 }
 .home .walk .walk-text h3 {
   margin-bottom: 10px;
@@ -249,9 +281,31 @@ footer {
   color: #22283a;
   background: white;
 }
+@media (max-width: 500px) {
+  .home .walk .walk-text .btn {
+    width: 100%;
+    color: white;
+    background: #22283a;
+    font-size: 2rem;
+    text-align: center;
+    padding: 25px 0;
+    border-radius: 5px;
+  }
+  .home .walk .walk-text .btn:hover {
+    color: #22283a;
+    background: white;
+  }
+}
 .home .walk .walk-img {
   width: 46%;
   margin-left: 4%;
+}
+@media (max-width: 500px) {
+  .home .walk .walk-img {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
 }
 .home .walk .walk-img img {
   width: 100%;
