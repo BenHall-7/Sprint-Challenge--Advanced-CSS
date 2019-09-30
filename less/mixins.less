@@ -6,12 +6,17 @@
     flex-direction: @direction;
 }
 
-.button(@width, @background) {
+.button(@color, @bgcol, @width: 100px) {
     width: @width;
-    color: white;
-    background: #22283a;
+    color: @color;
+    background: @bgcol;
     font-size: 2rem;
     text-align: center;
     padding: 10px 0;
     border-radius: 5px;
+
+    &:hover {
+        color: @bgcol;
+        background: @color;
+    }
 }
